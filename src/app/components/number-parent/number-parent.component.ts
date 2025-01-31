@@ -101,8 +101,8 @@ export class NumberParentComponent {
       id: '3',
       phoneNumber: '01234567892',
       userName: 'فودافون مصر',
-      country: 'المملكة العربية السعودية',
-      countryFlag: 'assets/imgs/flag (2).png',
+      country: 'المملكة الأردنية الهاشمية',
+      countryFlag: 'assets/imgs/world.png',
       currentBalance: 7000,
       previousBalance: 4000,
       subscriptionCount: 12
