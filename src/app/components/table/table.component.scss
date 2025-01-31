@@ -1,0 +1,158 @@
+.table-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 0.5rem;
+  }
+  
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+    min-width: 300px;
+  }
+  
+  thead {
+    background: #e9e6e6de;
+    border-radius: 8px;
+  }
+  
+  th {
+    padding: 0.75rem 0.5rem;
+    text-align: right;
+    font-weight: 500;
+    color: rgba(39, 38, 38, 0.719);
+    white-space: nowrap;
+  }
+  
+  th:first-child {
+    border-radius: 0 8px 8px 0;
+  }
+  
+  th:last-child {
+    border-radius: 8px 0 0 8px;
+  }
+  
+  tbody tr {
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #e0e0e0;
+    transition: all 0.4s ease;
+  }
+  
+  tbody tr:hover {
+    box-shadow: 0 0 0 1px #007bff;
+  }
+  
+  td {
+    padding: 0.75rem 0.5rem;
+    color: #333;
+    white-space: nowrap;
+    background: white;
+  }
+  
+  td:first-child {
+    border-radius: 0 8px 8px 0;
+  }
+  
+  td:last-child {
+    border-radius: 8px 0 0 8px;
+  }
+  
+  tbody tr:nth-child(even) td {
+    background: #f8f9fa;
+  }
+  
+  .company-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .star-icon img {
+    width: 16px;
+  }
+  
+  .table-footer {
+    padding: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    flex-direction: row-reverse;
+    margin-top: 0.75rem;
+  }
+  
+  .entries-info {
+    color: #666;
+  }
+  
+  .pagination {
+    display: flex;
+    gap: 0.25rem;
+  }
+  
+  .page-button {
+    min-width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .page-button.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  .page-button.next {
+    font-size: 1rem;
+  }
+  
+  @media (max-width: 575px) {
+    .table-container {
+      padding: 0.25rem;
+    }
+  
+    th,
+    td {
+      padding: 0.5rem 0.25rem;
+      font-size: 10px;
+    }
+  
+    .company-cell {
+      gap: 0.1rem;
+    }
+  
+    .star-icon img {
+      width: 14px;
+    }
+  
+    .table-footer {
+      flex-direction: column-reverse;
+      gap: 0.5rem;
+      align-items: flex-start;
+      padding: 0.5rem;
+    }
+  
+    .entries-info {
+      font-size: 10px;
+    }
+  
+    .page-button {
+      min-width: 24px;
+      height: 24px;
+      font-size: 10px;
+    }
+  }
+  

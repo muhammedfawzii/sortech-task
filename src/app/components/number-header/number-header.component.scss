@@ -1,0 +1,131 @@
+section {
+    background: white;
+  }
+  
+  .header-container {
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .phone-number-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .phone-select {
+    appearance: none;
+    background: transparent;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    min-width: 180px;
+    direction: ltr;
+  }
+  
+  .status {
+    background: #4caf50;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .stat-item {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .edit {
+    position: relative;
+  }
+  
+  .edit::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 65%;
+    background-color: rgba(94, 88, 88, 0.493);
+    left: 5%;
+  }
+  
+  i {
+    transition: all 0.6s;
+    cursor: pointer;
+  }
+  .color:hover {
+    color: #09c;
+  }
+  .background {
+    background-color: #eee;
+  }
+  .background:hover {
+    color: red;
+  }
+  .change-bg {
+    background-color: #eee;
+  }
+  
+  @media (max-width: 575px) {
+    .phone-select {
+      min-width: 120px;
+      font-size: 1rem;
+    }
+  
+    .status {
+      font-size: 0.75rem;
+    }
+  
+    .stat-item {
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .col-md-3 {
+      width: 100% !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .edit::before {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 300px) {
+    .phone-select {
+      min-width: 100px;
+      font-size: 0.875rem;
+    }
+  
+    .status {
+      font-size: 0.6rem;
+    }
+  
+    .stat-item {
+      padding: 0.25rem;
+    }
+  }
+  @media (max-width: 400px) {
+    .header-row {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .phone-number-container {
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+  

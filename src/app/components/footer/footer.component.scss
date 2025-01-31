@@ -1,0 +1,10 @@
+.footer-container {
+    background: #f8f9fa;
+  }
+
+  @media (max-width: 768px) {
+    .created-info {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }

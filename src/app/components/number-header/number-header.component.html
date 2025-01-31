@@ -1,0 +1,111 @@
+<section class="rounded-3 my-4 p-3">
+    <div class="container-fluid">
+      <div class="dis-number d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-2">
+          <span class="text-info change-bg rounded p-1 fs-4">#</span>
+          <span class="fw-semibold fs-5">عرض الرقم</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-x background p-1 rounded-2"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="rounded-3 w-100">
+    <div class="header-container container-fluid">
+      <div
+        class="header-row d-flex flex-sm-row justify-content-between align-items-center gap-2"
+      >
+        <div
+          class="phone-number-container justify-content-between d-flex align-items-center gap-2"
+        >
+          <div class="phone-dropdown">
+            <select
+              class="phone-select border-0"
+              (change)="onNumberChange($event)"
+              [value]="numberDetails.phoneNumber"
+            >
+              <option *ngFor="let number of phoneNumbers" [value]="number">
+                {{ number }}
+              </option>
+            </select>
+          </div>
+          <span class="status p-2 fs-6">قيد الاستخدام</span>
+        </div>
+  
+        <div class="position-relative">
+          <button (click)="openMenu()" class="btn text-muted fs-4">
+            <i class="fas fa-ellipsis fa-xl color"></i>
+          </button>
+          <div
+            *ngIf="menuOpen"
+            class="dropdown-menu show position-absolute start-0"
+          >
+            <button class="dropdown-item">
+              <i class="fa-solid fa-pen-to-square ms-2"></i>تعديل الرقم
+            </button>
+            <button class="dropdown-item text-danger">
+              <i class="fa-solid fa-strikethrough ms-2"></i>الغاء التعيين
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="stats-row row">
+        <div class="stat-item col-12 col-sm-6 col-md-3 edit">
+          <p class="label text-center text-muted">اسم البروتوكول</p>
+          <h6 class="value text-center">{{ numberDetails.userName }}</h6>
+        </div>
+        <div class="stat-item col-12 col-sm-6 col-md-3 edit">
+          <p class="label text-center text-muted">الدولة</p>
+          <div class="d-flex gap-0 text-center m-auto">
+            <img
+              [src]="numberDetails.countryFlag"
+              class="text-center ms-0 m-auto"
+              alt="Egypt Flag"
+            />
+            <h6 class="value me-2 country-info text-center m-auto">
+              {{ numberDetails.country }}
+            </h6>
+          </div>
+        </div>
+        <div class="stat-item col-12 col-sm-6 col-md-3 edit">
+          <p class="label text-center text-muted">العميل الحالي</p>
+          <div class="d-flex align-items-center justify-content-center">
+            <img src="./assets/imgs/germanycompany.jpg" width="20px" alt="">
+          <h6 class="value mt-1 text-center">{{ numberDetails.currentClient }}</h6>
+          </div>
+        </div>
+        <div class="stat-item col-12 col-sm-6 col-md-3">
+          <p class="label text-center text-muted">عدد الامتدادات</p>
+          <h6 class="value text-center">{{ numberDetails.subscriptionCount }}</h6>
+        </div>
+        <div class="stat-item col-12 col-sm-6 col-md-3 edit">
+          <p class="label text-center text-muted">تاريخ أخر شحنة</p>
+          <h6 class="value text-center">
+            {{ numberDetails.createdAt | date : "dd/MM/yyyy" }}
+          </h6>
+        </div>
+        <div class="stat-item col-12 col-sm-6 col-md-3 edit">
+          <p class="label text-center text-muted">الرصيد الحالي</p>
+          <h6 class="value text-center">
+            {{ numberDetails.currentBalance }} ج.م
+          </h6>
+        </div>
+        <div class="stat-item col-12 col-sm-6 col-md-3 edit">
+          <p class="label text-center text-muted">الرصيد المستخدم للعميل الحالي</p>
+          <h6 class="value text-center">
+            {{ numberDetails.previousBalance }} ج.م
+          </h6>
+        </div>
+        <div class="stat-item col-12 col-sm-6 col-md-3">
+          <p class="label text-center text-muted">الرصيد المستخدم للرقم ككل</p>
+          <h6 class="value text-center">
+            {{ numberDetails.usedBalanceForTotalNumber }} ج.م
+          </h6>
+        </div>
+      </div>
+    </div>
+  </section>
+  

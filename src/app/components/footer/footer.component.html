@@ -1,0 +1,15 @@
+<div class="footer-container rounded-2 p-3 mt-2">
+    <div class="created-info d-flex justify-content-between align-items-center">
+      <div>
+        <p class="text-muted">تم الانشاء بواسطة:</p>
+      <div class="d-flex align-items-center">
+        <img src="./assets/imgs/egypt.png" class="rounded-circle mb-2" height="30px" width="30px" alt="">
+        <p class="fw-semibold"> {{ info.createdBy }}</p>
+      </div>
+      </div>
+     <div>
+      <p  class="text-muted">تاريخ الانشاء:</p>
+      <p class="fw-semibold"> {{ info.createdAt | date:'short' }}</p>
+     </div>
+    </div>
+  </div>

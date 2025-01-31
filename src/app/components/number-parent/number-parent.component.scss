@@ -1,0 +1,31 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+
+  .modal-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .modal-overlay {
+      padding: 1rem;
+    }
+  }

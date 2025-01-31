@@ -1,0 +1,60 @@
+
+<div class="table-container">
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th class="text-center">العميل</th>
+            <th class="text-center">تاريخ التعيين</th>
+            <th class="text-center">تاريخ الغاء التعيين</th>
+            <th class="text-center">المسؤول عن التعيين</th>
+            <th class="text-center">الدقائق الدولية</th>
+            <th class="text-center">الدقائق المحلية</th>
+            <th class="text-center">المبلغ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of tableData">
+            <td class="text-center">
+              <div class="company-cell">
+                <span class="star-icon"><img src="./assets/imgs/germanycompany.jpg" width="20px" alt="The german company"></span>
+                {{ row.company }}
+              </div>
+            </td>
+            <td class="text-center">{{ row.executionDate }}</td>
+            <td class="text-center">{{ row.creationDate }}</td>
+            <td class="text-center">{{ row.responsiblePerson }}</td>
+            <td class="text-center">{{ row.externalRef }}</td>
+            <td class="text-center">{{ row.internalRef }}</td>
+            <td class="text-center">{{ row.amount }} ج.م</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-footer">
+      <div class="pagination">
+        <button class="page-button"><i class="fa-solid fa-chevron-right"></i></button>
+        <button class="page-button">5</button>
+        <button class="page-button">4</button>
+        <button class="page-button">3</button>
+        <button class="page-button">2</button>
+        <button class="page-button active">1</button>
+        <button class="page-button previous"><i class="fa-solid fa-chevron-left"></i></button>
+      </div>
+      <div class="dropdown entries-info">
+        <span class="" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          عرض  <button class="btn dropdown-toggle border border-1 border-black p-0">10</button> من 65
+        </span>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" (click)="changeDisplayCount(10)">10</a></li>
+          <li><a class="dropdown-item" (click)="changeDisplayCount(20)">20</a></li>
+          <li><a class="dropdown-item" (click)="changeDisplayCount(30)">30</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+  
+  
