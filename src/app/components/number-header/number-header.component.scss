@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 section {
     background: white;
   }
@@ -13,6 +14,9 @@ section {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+  }
+  .dropdown-menu{
+    min-width: unset;
   }
   
   .phone-number-container {

@@ -1,5 +1,5 @@
 import { CommonModule, DatePipe, NgFor } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-number-header',
@@ -26,7 +26,18 @@ export class NumberHeaderComponent {
     this.numberSelected.emit(selectedNumber);
   }
   
-  openMenu():void{
-    this.menuOpen = !this.menuOpen
+  openMenu(event: Event) {
+    event.stopPropagation();  
+    this.menuOpen = !this.menuOpen;
+  }
+
+  @HostListener('document:click', ['$event'])
+  closeMenu(event: Event) {
+    const target = event.target as HTMLElement;
+    
+     
+    if (!target.closest('.dropdown-menu') && !target.closest('.btn')) {
+      this.menuOpen = false;
+    }
   }
 }
